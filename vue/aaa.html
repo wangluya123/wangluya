@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/vue.js"></script>
+	</head>
+	<body>
+		
+		<div id="app">
+			<img @click="add(event)" :src="src" alt="" />
+			<a :href="href">百度</a>
+		</div>
+		
+		
+	<script>
+		
+		var vm = new Vue({
+			el:'#app',
+			data:{
+				src:'http://cn.vuejs.org/images/logo.png',
+				href:'http://www.baidu.com'
+			},
+			methods:{
+				add:function(e){
+					alert(1111);
+					console.log(event)
+				}
+			}
+		})
+	</script>	
+	</body>
+</html>

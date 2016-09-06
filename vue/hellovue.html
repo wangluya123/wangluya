@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/vue.js"></script>
+	</head>
+	<body>
+		
+		<div id="app">
+			<input v-model='price' type="text" />*<input v-model='count' type="text" /><br />
+				{{sum}}
+				
+				
+				{{ messare}}
+		</div>
+		
+		
+	<script>
+		
+//		var mess={
+//			name:'王鲁亚',
+//			age:''
+//		};/**/
+		var vm = new Vue({
+			el:'#app',
+			data:{
+				price:10,
+				count:5,
+				messare:[
+					1,2,3,4,5,6,7
+				]
+			},
+			computed:{
+				sum:{
+					get(){
+						return this.price*this.count	
+					
+					},
+					set(vel){
+						
+					}
+					
+				}
+			}
+		})
+	</script>	
+	</body>
+</html>
